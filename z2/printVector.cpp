@@ -115,3 +115,13 @@ void printVector16(const std::vector<int>& vectorToPrint) {
         std::cout << i++ << ' ';
     } while (i < vectorToPrint.size());
 }
+
+// Recursive version
+void printVector17(const std::vector<int>& vectorToPrint) {
+    static size_t i = 0;
+    if (i == vectorToPrint.size()) {
+        return;
+    }
+    std::cout << vectorToPrint[i++] << ' ';
+    printVector17(vectorToPrint);
+}
