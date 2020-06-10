@@ -85,3 +85,33 @@ void printVector12(const std::vector<int>& vectorToPrint) {
         std::cout << *it << ' ';
     }
 }
+
+void printVector13(const std::vector<int>& vectorToPrint) {
+    auto it = std::begin(vectorToPrint);
+    while (it != std::end(vectorToPrint)) {
+        std::cout << *it << ' ';
+        it++;
+    }
+}
+
+void printVector14(const std::vector<int>& vectorToPrint) {
+    size_t i = 0;
+    while (i < vectorToPrint.size()) {
+        std::cout << i++ << ' ';
+    }
+}
+
+void printVector15(const std::vector<int>& vectorToPrint) {
+    auto it = std::begin(vectorToPrint);
+    do {
+        std::cout << *it << ' ';
+        it++;
+    } while (it != std::end(vectorToPrint));
+}
+
+void printVector16(const std::vector<int>& vectorToPrint) {
+    size_t i = 0;
+    do {
+        std::cout << i++ << ' ';
+    } while (i < vectorToPrint.size());
+}

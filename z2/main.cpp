@@ -23,12 +23,20 @@ int main() {
     printVector8(testVector);
     std::cout << "\n9:     ";
     printVector9(testVector);
-    std::cout << "\n10:     ";
+    std::cout << "\n10:    ";
     printVector10(testVector);
-    std::cout << "\n11:     ";
-    printVector10(testVector);
-    std::cout << "\n12:     ";
-    printVector10(testVector);
+    std::cout << "\n11:    ";
+    printVector11(testVector);
+    std::cout << "\n12:    ";
+    printVector12(testVector);
+    std::cout << "\n13:    ";
+    printVector13(testVector);
+    std::cout << "\n14:    ";
+    printVector14(testVector);
+    std::cout << "\n15:    ";
+    printVector15(testVector);
+    std::cout << "\n16:    ";
+    printVector16(testVector);
 
     std::cout << "\n";
 
