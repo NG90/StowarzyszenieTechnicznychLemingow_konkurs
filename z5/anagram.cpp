@@ -2,7 +2,6 @@
 
 #include <algorithm>
 #include <iostream>
-#include <string>
 
 void isAnagram(const std::string& firstSentence, const std::string& secondSentence){
     std::string newFirst = permutateString(firstSentence);
