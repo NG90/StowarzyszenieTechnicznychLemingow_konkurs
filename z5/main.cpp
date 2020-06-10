@@ -1,5 +1,7 @@
 #include "anagram.hpp"
 
+#include <iostream>
+
 int main(){
     isAnagram("ABCDE", "ADBEC");
     isAnagram("Sample text", "Sample  t ext");
