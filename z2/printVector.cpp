@@ -48,3 +48,10 @@ void printVector7(const std::vector<int>& vectorToPrint) {
     std::copy_n(std::begin(vectorToPrint), vectorToPrint.size(),
                 std::ostream_iterator<int>(std::cout, " "));
 }
+
+void printVector8(const std::vector<int>& vectorToPrint) {
+    std::transform(std::begin(vectorToPrint), std::end(vectorToPrint),
+                   std::ostream_iterator<int>(std::cout, " "), [](const int el) {
+                       return el;
+                   });
+}
