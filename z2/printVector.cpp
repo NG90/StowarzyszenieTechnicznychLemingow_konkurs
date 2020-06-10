@@ -43,3 +43,8 @@ void printVector6(const std::vector<int>& vectorToPrint) {
                      return true;
                  });
 }
+
+void printVector7(const std::vector<int>& vectorToPrint) {
+    std::copy_n(std::begin(vectorToPrint), vectorToPrint.size(),
+                std::ostream_iterator<int>(std::cout, " "));
+}

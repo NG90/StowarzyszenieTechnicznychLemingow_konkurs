@@ -17,6 +17,8 @@ int main() {
     printVector5(testVector);
     std::cout << "\n6:     ";
     printVector6(testVector);
+    std::cout << "\n7:     ";
+    printVector7(testVector);
 
     std::cout << "\n";
 

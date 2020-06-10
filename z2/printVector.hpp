@@ -8,3 +8,4 @@ void printVector3(const std::vector<int>&);
 void printVector4(const std::vector<int>&);
 void printVector5(const std::vector<int>&);
 void printVector6(const std::vector<int>&);
+void printVector7(const std::vector<int>&);
