@@ -62,3 +62,14 @@ void printVector9(const std::vector<int>& vectorToPrint) {
                         return vectorToPrint[i++];
                     });
 }
+
+std::ostream& operator<<(std::ostream& os, const std::vector<int>& vectorToPrint) {
+    for (auto const& el : vectorToPrint) {
+        os << el << " ";
+    }
+    return os;
+}
+
+void printVector10(const std::vector<int>& vectorToPrint) {
+    std::cout << vectorToPrint;
+}

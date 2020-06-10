@@ -23,6 +23,8 @@ int main() {
     printVector8(testVector);
     std::cout << "\n9:     ";
     printVector9(testVector);
+    std::cout << "\n10:     ";
+    printVector10(testVector);
 
     std::cout << "\n";
 

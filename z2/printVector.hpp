@@ -11,3 +11,4 @@ void printVector6(const std::vector<int>&);
 void printVector7(const std::vector<int>&);
 void printVector8(const std::vector<int>&);
 void printVector9(const std::vector<int>&);
+void printVector10(const std::vector<int>&);
