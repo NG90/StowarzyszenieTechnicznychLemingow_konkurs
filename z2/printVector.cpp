@@ -20,3 +20,9 @@ void printVector3(const std::vector<int>& vectorToPrint) {
         std::cout << c << ' ';
     });
 }
+
+void printVector4(const std::vector<int>& vectorToPrint) {
+    std::for_each_n(std::begin(vectorToPrint), vectorToPrint.size(), [](const int c) {
+        std::cout << c << ' ';
+    });
+}
