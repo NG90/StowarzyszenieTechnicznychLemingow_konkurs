@@ -1,11 +1,9 @@
 #include "anagram.hpp"
 
-void isAnagram(std::string firstSentence, std::string secondSentence){
-    
+void isAnagram(const std::string& firstSentence, const std::string& secondSentence){
     std::string newFirst = permutateString(firstSentence);
     std::string newSecond = permutateString(secondSentence);
     
-
     if(newFirst == newSecond){
         std::cout << '\"' << firstSentence << "\" and \"" << secondSentence << "\" are anagrams." << '\n';
     } else{

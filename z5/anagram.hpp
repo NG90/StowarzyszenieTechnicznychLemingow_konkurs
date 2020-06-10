@@ -4,5 +4,5 @@
 #include <iostream>
 #include <string>
 
-void isAnagram(std::string, std::string);
+void isAnagram(const std::string&, const std::string&);
 std::string permutateString(std::string);
