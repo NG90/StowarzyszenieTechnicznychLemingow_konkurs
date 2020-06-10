@@ -14,3 +14,9 @@ void printVector2(const std::vector<int>& vectorToPrint) {
     std::copy(std::begin(vectorToPrint), std::end(vectorToPrint),
               std::ostream_iterator<int>(std::cout, " "));
 }
+
+void printVector3(const std::vector<int>& vectorToPrint) {
+    std::for_each(std::begin(vectorToPrint), std::end(vectorToPrint), [](const int c) {
+        std::cout << c << ' ';
+    });
+}

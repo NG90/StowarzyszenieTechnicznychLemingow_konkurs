@@ -8,6 +8,8 @@ int main() {
     printVector1(testVector);
     std::cout << '\n';
     printVector2(testVector);
-
+    std::cout << '\n';
+    printVector3(testVector);
+    std::cout << '\n';
     return 0;
 }
