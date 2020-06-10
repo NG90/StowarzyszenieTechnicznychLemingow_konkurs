@@ -34,3 +34,12 @@ void printVector5(const std::vector<int>& vectorToPrint) {
         return true;
     });
 }
+
+// Another little bit "workaroundish" :)
+void printVector6(const std::vector<int>& vectorToPrint) {
+    std::copy_if(std::begin(vectorToPrint), std::end(vectorToPrint),
+                 std::ostream_iterator<int>(std::cout, " "), [](const int el) {
+                     (void)el;
+                     return true;
+                 });
+}
