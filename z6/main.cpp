@@ -3,7 +3,7 @@
 #include "remove_4_6.hpp"
 
 int main() {
-    std::string testString{"Ala ma kota a kot ma Ale, jednak to było dawno temu."};
+    std::string testString{"Ala ma kota a kot ma Ale, jednak to bylo dawno temu."};
 
     std::cout << "Input:\n"
               << testString << "\n\n";
