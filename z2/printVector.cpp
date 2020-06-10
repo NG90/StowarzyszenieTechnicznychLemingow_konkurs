@@ -55,3 +55,10 @@ void printVector8(const std::vector<int>& vectorToPrint) {
                        return el;
                    });
 }
+
+void printVector9(const std::vector<int>& vectorToPrint) {
+    std::generate_n(std::ostream_iterator<int>(std::cout, " "), vectorToPrint.size(),
+                    [i{0}, &vectorToPrint]() mutable {
+                        return vectorToPrint[i++];
+                    });
+}
