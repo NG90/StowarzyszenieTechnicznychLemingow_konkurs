@@ -1,14 +1,15 @@
 #include "anagram.hpp"
 
 void isAnagram(std::string firstSentence, std::string secondSentence){
-    firstSentence = permutateString(firstSentence);
-    secondSentence = permutateString(secondSentence);
+    
+    std::string newFirst = permutateString(firstSentence);
+    std::string newSecond = permutateString(secondSentence);
     
 
-    if(firstSentence == secondSentence){
-        std::cout << "This 2 sentences are anagrams" << '\n';
+    if(newFirst == newSecond){
+        std::cout << '\"' << firstSentence << "\" and \"" << secondSentence << "\" are anagrams." << '\n';
     } else{
-        std::cout << "This 2 sentences aren't anagrams " << '\n';
+        std::cout << '\"' << firstSentence << "\" and \"" << secondSentence << "\" aren't anagrams." << '\n';
     }
 }
 std::string permutateString(std::string sentence){
@@ -16,6 +17,9 @@ std::string permutateString(std::string sentence){
     if(std::count(sentence.begin(), sentence.end(), ' ') > 0){
         sentence.erase(std::remove(sentence.begin(), sentence.end(), ' '), sentence.end());
     }
+    std::for_each(sentence.begin(), sentence.end(), [](char& character){
+        character = std::toupper(character);
+    });
 
     return sentence;
 }
