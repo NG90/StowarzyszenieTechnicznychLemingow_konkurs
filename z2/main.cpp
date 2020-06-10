@@ -25,6 +25,10 @@ int main() {
     printVector9(testVector);
     std::cout << "\n10:     ";
     printVector10(testVector);
+    std::cout << "\n11:     ";
+    printVector10(testVector);
+    std::cout << "\n12:     ";
+    printVector10(testVector);
 
     std::cout << "\n";
 

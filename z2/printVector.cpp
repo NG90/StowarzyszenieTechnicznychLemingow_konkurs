@@ -73,3 +73,15 @@ std::ostream& operator<<(std::ostream& os, const std::vector<int>& vectorToPrint
 void printVector10(const std::vector<int>& vectorToPrint) {
     std::cout << vectorToPrint;
 }
+
+void printVector11(const std::vector<int>& vectorToPrint) {
+    for (size_t i = 0; i < vectorToPrint.size(); ++i) {
+        std::cout << vectorToPrint[i] << ' ';
+    }
+}
+
+void printVector12(const std::vector<int>& vectorToPrint) {
+    for (auto it = std::begin(vectorToPrint); it != std::end(vectorToPrint); ++it) {
+        std::cout << *it << ' ';
+    }
+}
