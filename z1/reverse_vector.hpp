@@ -13,3 +13,7 @@ void reverseVector4(std::vector<int>&);
 void reverseVector5(std::vector<int>&);
 
 void reverseVector6(std::vector<int>&);
+
+void reverseVector7(std::vector<int>&);
+
+void reverseVector8(std::vector<int>&);

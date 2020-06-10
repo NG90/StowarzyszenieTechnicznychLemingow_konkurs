@@ -11,7 +11,7 @@ void print(T vec) {
 
 int main() {
     std::vector<int> test{1, 2, 3, 4, 5};
-    reverseVector3(test);
+    reverseVector8(test);
     print(test);
     return 0;
 }
