@@ -11,10 +11,10 @@ void print(T vec) {
 }
 
 int main() {
-    std::vector<std::string> str{"Ala ", "ma ", "ma ", "kota, ", "a ", "kot ", "ma ", "Ale ", "Ale.. ", "Ala ", "Ala "};
+    std::string str{"Ala ma ma kota, a kot ma Ale Ale Ala Ala "};
     std::cout << "BEFORE REMOVING DUPLICATES:\n";
-    print(str);
-    std::cout << "AFTER REMOVING DUPLCAITES:\n";
-    removeDuplicates(str);
-    print(str);
+    std::cout << str;
+    std::cout << "\nAFTER REMOVING DUPLICATES:\n";
+    std::cout << remove_repeating(str);
+    std::cout << '\n';
 }
