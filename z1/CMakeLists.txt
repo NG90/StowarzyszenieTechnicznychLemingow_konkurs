@@ -4,6 +4,6 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -pedantic -Wconversion -Werror")
 
-project(printVector)
+project(reverse_vector)
 
-add_executable(${PROJECT_NAME} main.cpp printVector.cpp)
+add_executable(${PROJECT_NAME} main.cpp reverse_vector.cpp)

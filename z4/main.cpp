@@ -1,8 +1,8 @@
-#include "fibonacci.hpp"
-
 #include <iostream>
 
-int main(){
+#include "fibonacci.hpp"
+
+int main() {
     long int fib1 = fibonacci1(16);
     std::cout << fib1 << "\n";
     long int fib2 = fibonacci2(16);
