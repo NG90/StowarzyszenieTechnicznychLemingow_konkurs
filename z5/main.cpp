@@ -3,7 +3,7 @@
 #include <iostream>
 
 int main(){
-    isAnagram("ABCDE", "ADBEC");
+    isAnagram("ABCDE", "AdbEC");
     isAnagram("Sample text", "Sample  t ext");
     isAnagram("", "");
     isAnagram("A B C D E", "ABCDEE");
