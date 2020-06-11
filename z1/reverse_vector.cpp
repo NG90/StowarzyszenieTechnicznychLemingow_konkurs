@@ -56,3 +56,19 @@ void reverseVector8(std::vector<int>& vecToReverse) {
     std::copy(vecToReverse.rbegin(), vecToReverse.rend(), std::back_inserter(temp));
     vecToReverse = temp;
 }
+
+void reverseVector9(std::vector<int>& vecToReverse) {
+    std::vector<int> temp{};
+    std::transform(vecToReverse.rbegin(), vecToReverse.rend(), std::back_inserter(temp), [](const int el) {
+        return el;
+    });
+    vecToReverse = temp;
+}
+
+void reverseVector10(std::vector<int>& vecToReverse) {
+    std::vector<int> temp{};
+    std::generate_n(std::back_inserter(temp), vecToReverse.size(), [&vecToReverse, i{vecToReverse.size() - 1}]() mutable {
+        return vecToReverse[i--];
+    });
+    vecToReverse = temp;
+}

@@ -73,5 +73,22 @@ int main() {
     reverseVector8(test8);
     std::cout << "after: \n";
     print(test8);
+
+    std::cout << "\nreverseVector9\n";
+    std::cout << "before: \n";
+    std::vector<int> test9{1, 2, 3, 4, 5};
+    print(test9);
+    reverseVector9(test9);
+    std::cout << "after: \n";
+    print(test9);
+
+    std::cout << "\nreverseVector10\n";
+    std::cout << "before: \n";
+    std::vector<int> test10{1, 2, 3, 4, 5};
+    print(test10);
+    reverseVector9(test10);
+    std::cout << "after: \n";
+    print(test10);
+
     return 0;
 }
