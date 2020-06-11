@@ -39,6 +39,8 @@ int main() {
     printVector16(testVector);
     std::cout << "\n17:    ";
     printVector17(testVector);
+    std::cout << "\n18:    ";
+    printVector18(testVector);
 
     std::cout << "\n";
 

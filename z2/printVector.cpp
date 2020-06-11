@@ -3,6 +3,7 @@
 #include <algorithm>
 #include <iostream>
 #include <iterator>
+#include <sstream>
 
 void printVector1(const std::vector<int>& vectorToPrint) {
     for (auto el : vectorToPrint) {
@@ -124,4 +125,12 @@ void printVector17(const std::vector<int>& vectorToPrint) {
     }
     std::cout << vectorToPrint[i++] << ' ';
     printVector17(vectorToPrint);
+}
+
+void printVector18(const std::vector<int>& vectorToPrint) {
+    std::ostringstream oss;
+
+    std::copy(std::begin(vectorToPrint), std::end(vectorToPrint), std::ostream_iterator<int>(oss, " "));
+
+    std::cout << oss.str();
 }
