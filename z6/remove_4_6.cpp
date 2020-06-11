@@ -25,9 +25,12 @@ std::string remove4or6LengthWords(const std::string& text) {
             iterStartFind = std::next(iterFound);
             return correctWord;
         } else {
-            std::string correctSpaceOrPunct{*iterFound};
             iterStartFind = std::next(iterFound);
-            return correctSpaceOrPunct;
+            if (*iterFound != ' ') {
+                std::string correctSpaceOrPunct{*iterFound};
+                return correctSpaceOrPunct;
+            }
+            return std::string{};
         }
     });
 
