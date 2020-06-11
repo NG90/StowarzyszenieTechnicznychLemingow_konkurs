@@ -2,27 +2,39 @@
 
 #include <algorithm>
 #include <cctype>
-#include <iostream>
+#include <iterator>
+#include <sstream>
+#include <vector>
 
 std::string remove4or6LengthWords(const std::string& text) {
-    std::string textWithRemovals{};
+    auto numberSpacesAndPuncts = std::count_if(std::begin(text), std::end(text), [](unsigned char c) {
+        return std::isspace(c) || std::ispunct(c);
+    });
 
-    auto it_start = std::begin(text);
-    auto it_found = std::begin(text);
+    auto iterStartFind = std::begin(text);
+    auto iterFound = std::begin(text);
+    std::vector<std::string> vectorOfCorrectWords;
 
-    while (it_found != std::end(text)) {
-        it_found = std::find_if(it_start, std::end(text), [](unsigned char c) {
+    std::generate_n(std::back_inserter(vectorOfCorrectWords), numberSpacesAndPuncts, [&iterFound, &iterStartFind, &text]() {
+        iterFound = std::find_if(iterStartFind, std::end(text), [](unsigned char c) {
             return std::isspace(c) || std::ispunct(c);
         });
-        auto dist = std::distance(it_start, it_found);
-        if (dist != 4 && dist != 6) {
-            auto s = text.substr(std::distance(std::begin(text), it_start), dist + 1);
-            textWithRemovals = textWithRemovals + s;
+        auto wordLength = std::distance(iterStartFind, iterFound);
+        if (wordLength != 4 && wordLength != 6) {
+            auto correctWord = text.substr(std::distance(std::begin(text), iterStartFind), wordLength + 1);
+            iterStartFind = std::next(iterFound);
+            return correctWord;
         } else {
-            textWithRemovals = textWithRemovals + *it_found;
+            std::string correctSpaceOrPunct{*iterFound};
+            iterStartFind = std::next(iterFound);
+            return correctSpaceOrPunct;
         }
-        it_start = std::next(it_found);
+    });
+
+    std::ostringstream oss;
+    if (!vectorOfCorrectWords.empty()) {
+        std::copy(std::begin(vectorOfCorrectWords), std::end(vectorOfCorrectWords), std::ostream_iterator<std::string>(oss));
     }
 
-    return textWithRemovals;
+    return oss.str();
 }
