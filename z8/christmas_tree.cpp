@@ -29,7 +29,6 @@ void draw_tree(int height) {
         }
     });
 
-    std::cout << "Merry Christmas!\n"
+    std::cout << "\n"
               << tree << "\n";
 }
-
