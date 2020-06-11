@@ -1,13 +1,13 @@
-#include "anagram.hpp"
-
 #include <iostream>
 
-int main(){
-    isAnagram("ABCDE", "AdbEC");
-    isAnagram("Sample text", "Sample  t ext");
-    isAnagram("", "");
-    isAnagram("A B C D E", "ABCDEE");
-    isAnagram("sample text", "other TEXT");
-    
+#include "anagram.hpp"
+
+int main() {
+    std::cout << isAnagram("ABCDE", "AdbEC") << '\n';
+    std::cout << isAnagram("Sample text", "Sample  t ext") << '\n';
+    std::cout << isAnagram("", "") << '\n';
+    std::cout << isAnagram("A B C D E", "ABCDEE") << '\n';
+    std::cout << isAnagram("sample text", "other TEXT") << '\n';
+
     return 0;
 }

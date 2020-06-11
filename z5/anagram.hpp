@@ -2,4 +2,4 @@
 
 #include <string>
 
-void isAnagram(const std::string&, const std::string&);
+bool isAnagram(const std::string&, const std::string&);
